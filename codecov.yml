@@ -1,7 +1,7 @@
 coverage:
   round: nearest
   ignore:
-    - ackhandler/packet_linkedlist.go
+    - internal/ackhandler/packet_linkedlist.go
     - h2quic/gzipreader.go
     - h2quic/response.go
     - internal/utils/byteinterval_linkedlist.go

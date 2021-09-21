@@ -6,8 +6,6 @@ import (
 	"github.com/zhangjiaxinghust/mp-quic/congestion"
 	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
 	"github.com/zhangjiaxinghust/mp-quic/internal/wire"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
 )
 
 type mockCongestion struct {

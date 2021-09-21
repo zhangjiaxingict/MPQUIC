@@ -4,8 +4,6 @@ import (
 	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
 	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
 	"github.com/zhangjiaxinghust/mp-quic/internal/wire"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("receivedPacketHistory", func() {

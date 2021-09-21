@@ -1,14 +1,14 @@
 package quic
 
 import (
+	ackhandler2 "github.com/zhangjiaxinghust/mp-quic/ackhandler"
 	"time"
 
-	"github.com/zhangjiaxinghust/mp-quic/internal/ackhandler"
 	"github.com/zhangjiaxinghust/mp-quic/congestion"
-	"github.com/zhangjiaxinghust/mp-quic/qerr"
 	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
 	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
 	"github.com/zhangjiaxinghust/mp-quic/internal/wire"
+	"github.com/zhangjiaxinghust/mp-quic/qerr"
 )
 
 const (
@@ -24,8 +24,8 @@ type path struct {
 
 	rttStats *congestion.RTTStats
 
-	sentPacketHandler     ackhandler.SentPacketHandler
-	receivedPacketHandler ackhandler.ReceivedPacketHandler
+	sentPacketHandler     ackhandler2.SentPacketHandler
+	receivedPacketHandler ackhandler2.ReceivedPacketHandler
 
 	open      utils.AtomicBool
 	closeChan chan *qerr.QuicError
@@ -61,12 +61,12 @@ func (p *path) setup(oliaSenders map[protocol.PathID]*congestion.OliaSender) {
 		oliaSenders[p.pathID] = cong.(*congestion.OliaSender)
 	}
 
-	sentPacketHandler := ackhandler.NewSentPacketHandler(p.rttStats, cong, p.onRTO)
+	sentPacketHandler := ackhandler2.NewSentPacketHandler(p.rttStats, cong, p.onRTO)
 
 	now := time.Now()
 
 	p.sentPacketHandler = sentPacketHandler
-	p.receivedPacketHandler = ackhandler.NewReceivedPacketHandler(p.sess.version)
+	p.receivedPacketHandler = ackhandler2.NewReceivedPacketHandler(p.sess.version)
 
 	p.packetNumberGenerator = newPacketNumberGenerator(protocol.SkipPacketAveragePeriodLength)
 
@@ -224,7 +224,7 @@ func (p *path) handlePacketImpl(pkt *receivedPacket) error {
 	// Only do this after decrupting, so we are sure the packet is not attacker-controlled
 	p.largestRcvdPacketNumber = utils.MaxPacketNumber(p.largestRcvdPacketNumber, hdr.PacketNumber)
 
-	isRetransmittable := ackhandler.HasRetransmittableFrames(packet.frames)
+	isRetransmittable := ackhandler2.HasRetransmittableFrames(packet.frames)
 	if err = p.receivedPacketHandler.ReceivedPacket(hdr.PacketNumber, isRetransmittable); err != nil {
 		return err
 	}

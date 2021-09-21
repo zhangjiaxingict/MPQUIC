@@ -4,8 +4,6 @@ import (
 	"reflect"
 
 	"github.com/zhangjiaxinghust/mp-quic/internal/wire"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("retransmittable frames", func() {
