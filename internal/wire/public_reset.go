@@ -5,9 +5,9 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"github.com/zhangjiaxinghust/mp-quic/internal/handshake"
+	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
 )
 
 // A PublicReset is a PUBLIC_RESET

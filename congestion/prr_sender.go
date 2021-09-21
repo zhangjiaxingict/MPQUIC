@@ -3,8 +3,8 @@ package congestion
 import (
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
 )
 
 // PrrSender implements the Proportional Rate Reduction (PRR) per RFC 6937

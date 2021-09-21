@@ -7,8 +7,8 @@ import (
 	"sync"
 
 	"github.com/bifurcation/mint"
-	"github.com/lucas-clemente/quic-go/internal/crypto"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/crypto"
+	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
 )
 
 // KeyDerivationFunction is used for key derivation

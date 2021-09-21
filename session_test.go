@@ -14,15 +14,15 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/lucas-clemente/quic-go/ackhandler"
-	"github.com/lucas-clemente/quic-go/internal/crypto"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/mocks"
-	"github.com/lucas-clemente/quic-go/internal/mocks/mocks_fc"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/testdata"
-	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"github.com/zhangjiaxinghust/mp-quic/ackhandler"
+	"github.com/zhangjiaxinghust/mp-quic/internal/crypto"
+	"github.com/zhangjiaxinghust/mp-quic/internal/handshake"
+	"github.com/zhangjiaxinghust/mp-quic/internal/mocks"
+	"github.com/zhangjiaxinghust/mp-quic/internal/mocks/mocks_fc"
+	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/testdata"
+	"github.com/zhangjiaxinghust/mp-quic/internal/wire"
+	"github.com/zhangjiaxinghust/mp-quic/qerr"
 )
 
 type mockConnection struct {

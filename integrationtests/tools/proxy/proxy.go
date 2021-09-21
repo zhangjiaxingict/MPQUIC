@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
 )
 
 // Connection is a UDP connection

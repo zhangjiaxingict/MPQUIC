@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	quic "github.com/lucas-clemente/quic-go"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	quic "github.com/zhangjiaxinghust/mp-quic"
+	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
 )
 
 var addr = "localhost:4242"

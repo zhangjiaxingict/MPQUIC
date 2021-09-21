@@ -9,14 +9,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/ackhandler"
-	"github.com/lucas-clemente/quic-go/congestion"
-	"github.com/lucas-clemente/quic-go/internal/flowcontrol"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"github.com/zhangjiaxinghust/mp-quic/ackhandler"
+	"github.com/zhangjiaxinghust/mp-quic/congestion"
+	"github.com/zhangjiaxinghust/mp-quic/internal/flowcontrol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/handshake"
+	"github.com/zhangjiaxinghust/mp-quic/internal/protocol"
+	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
+	"github.com/zhangjiaxinghust/mp-quic/internal/wire"
+	"github.com/zhangjiaxinghust/mp-quic/qerr"
 )
 
 type unpacker interface {

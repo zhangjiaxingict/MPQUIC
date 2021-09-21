@@ -7,9 +7,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/crypto"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"github.com/zhangjiaxinghust/mp-quic/internal/crypto"
+	"github.com/zhangjiaxinghust/mp-quic/internal/utils"
+	"github.com/zhangjiaxinghust/mp-quic/qerr"
 )
 
 type serverConfigClient struct {

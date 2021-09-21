@@ -1,4 +1,4 @@
-package main
+package ackhandler
 
 import (
 	_ "github.com/clipperhouse/linkedlist"
